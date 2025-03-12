@@ -1,14 +1,20 @@
 void main() {
   
-  var favoriteBook1 = new FavoriteBook ();
+  var favoriteBook1 = new FavoriteBook ("Cosmos", 250, 98.99, true);
+  var favoriteBook2 = new FavoriteBook ("Harry Potter", 550, 198.99, true);
   favoriteBook1.show();
+  favoriteBook2.show();
 }
 
 class FavoriteBook {
-  String faveBook = "Moneyball: The Art of Winning an Unfair Game";
-  int numberOfPages = 288;
-  double price = 23.95;
-  bool haveRead = false;
+  String faveBook;
+  int numberOfPages;
+  double price;
+  bool haveRead;
+  
+  
+  //Constructor for the FavoriteBook class
+  FavoriteBook(this.faveBook, this.numberOfPages, this.price, this.haveRead);
   
 show() {
   print(faveBook);
